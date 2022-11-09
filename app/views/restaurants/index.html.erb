@@ -2,11 +2,11 @@
 
 <% @restaurants.each do |restaurant| %>
   <div class="row">
-    <div class="col"><%= restaurant.name %></div>
+    <div class="col"><%= link_to restaurant.name, restaurant_path(restaurant    ) %></div>
     <div class="col"><%= restaurant.address %></div>
     <div class="col"><%= restaurant.category %></div>
     <div class="col"><%= restaurant.phone_number %></div>
   </div>
 <% end %>
 <br>
-<%= link_to "+ Add new restaurant", restaurants_new_path %>
+<%= link_to "+ Add new restaurant", new_restaurant_path, class: "btn btn-primary" %>
